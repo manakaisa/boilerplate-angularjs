@@ -1,2 +1,2 @@
 # boilerplate-angularjs
-Boilerplate AngularJS
+A Boilerplate for AngularJS

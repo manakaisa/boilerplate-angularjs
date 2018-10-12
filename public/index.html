@@ -1,13 +1,34 @@
-<html>
+<!doctype html>
+<html lang="en" ng-app="M-APP" ng-controller="IndexController as $index">
+  <head>
+    <!-- Metadata -->
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="">
+	
+    <!-- SEO -->
+    <title>{{$index.title}}</title>
+    <meta name="description" content="{{$index.description}}">
+  
+    <!-- CSS: Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <!-- CSS: M-APP -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Content -->
+    <ng-view></ng-view>
 
-<head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
-
+    <!-- Dependency: jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Dependency: Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- Dependency: AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.min.js"></script>
+    <!-- M-APP -->
+    <script type="module" src="app/app.js"></script>
+  </body>
 </html>
