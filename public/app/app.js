@@ -1,6 +1,6 @@
 
 import $configs from './configs.js';
-import $sitemaps from './sitemaps.js';
+import $routes from './routes.js';
 import * as $indexCtrl from './controllers/index.js';
 import * as $homeCtrl from './controllers/home.js';
 import * as $mLayoutDir from './directives/m-layout.js';
@@ -13,16 +13,16 @@ var app = angular.module($configs.appName, ['ngRoute']);
 // Configuration
 app.config(['$routeProvider', '$locationProvider', '$compileProvider', '$sceProvider', function ($routeProvider, $locationProvider, $compileProvider, $sceProvider) {
   // Set routes
-  for (let site in $sitemaps) {
-    $routeProvider.when(site, {
-      templateUrl: $sitemaps[site].path
+  for (let route in $routes) {
+    $routeProvider.when(route, {
+      templateUrl: $routes[route].path
     });
   }
-  // If route is invalid, go to 404 page
+  // Set 404 page
   $routeProvider.otherwise({
-    templateUrl: 'views/404.html'
+    templateUrl: '404.html'
   });
-  // Set HTML5 mode for $location service
+  // Set HTML5 mode for $location
   $locationProvider.html5Mode({
     enabled: true
   });
