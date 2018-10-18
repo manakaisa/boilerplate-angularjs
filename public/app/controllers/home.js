@@ -1,14 +1,14 @@
-export const name = 'HomeController';
+export default {
+  name: 'HomeController',
+  annotation: ['$scope'],
+  controller: function ($scope) {
+    let $me = this;
 
-export const annotation = ['$scope'];
+    $scope.$emit('updatedPageInfo', {
+      title: 'Home',
+      description: 'Home - description'
+    });
 
-export const controller = function ($scope) {
-  let $me = this;
-
-  $scope.$emit('updatedPageInfo', {
-    title: 'Home',
-    description: 'Home - description'
-  });
-
-  $me.content = 'hello world';
+    $me.content = 'hello world';
+  }
 };
