@@ -1,7 +1,6 @@
-export default {
-  name: 'HomeController',
-  annotation: ['$scope'],
-  controller: function ($scope) {
+export default angular
+  .module('controllers.HomeController', [])
+  .controller('HomeController', ['$scope', function ($scope) {
     let $me = this;
 
     $scope.$emit('updatedPageInfo', {
@@ -10,5 +9,5 @@ export default {
     });
 
     $me.content = 'hello world';
-  }
-};
+  }])
+  .name;

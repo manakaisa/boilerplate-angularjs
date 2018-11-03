@@ -4,9 +4,9 @@ const templateHTML = `
   </ul>
 `;
 
-export default {
-  name: 'mMenu',
-  component: {
+export default angular
+  .module('components.mMenu', [])
+  .component('mMenu', {
     bindings: {
       data: '<'
     },
@@ -16,5 +16,5 @@ export default {
       
       $ctrl.$onInit = () => { console.log($ctrl.data); };
     }]
-  }
-};
+  })
+  .name;

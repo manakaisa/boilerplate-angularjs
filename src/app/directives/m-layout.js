@@ -1,7 +1,6 @@
-export default {
-  name: 'mLayout',
-  annotation: [],
-  directive: function () {
+export default angular
+  .module('directives.mLayout', [])
+  .directive('mLayout', [function () {
     return {
       transclude: {
         top: '?mLayoutTop',
@@ -14,5 +13,5 @@ export default {
         return $attrs.href;
       }
     };
-  }
-};
+  }])
+  .name;

@@ -1,7 +1,6 @@
-export default {
-  name: 'mOnloaded',
-  annotation: ['$timeout'],
-  directive: function ($timeout) {
+export default angular
+  .module('directives.mOnloaded', [])
+  .directive('mOnloaded', ['$timeout', function ($timeout) {
     return {
       restrict: 'A',
       link: ($scope, $element, $attrs) => {
@@ -10,5 +9,5 @@ export default {
         });
       }
     };
-  }
-};
+  }])
+  .name;

@@ -1,7 +1,6 @@
-export default {
-  name: 'IndexController',
-  annotation: ['$scope'],
-  controller: function ($scope) {
+export default angular
+  .module('controllers.IndexController', [])
+  .controller('IndexController', ['$scope', function ($scope) {
     let $me = this;
     
     $scope.$on('updatedPageInfo', (e, pageInfo) => {
@@ -19,5 +18,5 @@ export default {
     $me.popMenu = () => {
       $me.menu.pop();
     };
-  }
-};
+  }])
+  .name;
