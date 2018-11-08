@@ -1,11 +1,11 @@
 export default angular
-  .module('directives.mOnloaded', [])
-  .directive('mOnloaded', ['$timeout', function ($timeout) {
+  .module('directives.mOnRender', [])
+  .directive('mOnRender', ['$timeout', function ($timeout) {
     return {
       restrict: 'A',
       link: ($scope, $element, $attrs) => {
         $timeout(() => {
-          $scope.$apply($attrs.mOnloaded);
+          $scope.$apply($attrs.mOnRender);
         });
       }
     };

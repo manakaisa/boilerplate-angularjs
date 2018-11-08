@@ -1,3 +1,4 @@
 export default {
-  '/': { path: 'home.html' }
+  '/': { path: 'home.html' },
+  '/about': { path: 'about.html' }
 };

@@ -1,9 +1,9 @@
 import $mLayout from './directives/m-layout.js';
-import $mOnloaded from './directives/m-onloaded.js';
+import $mOnRender from './directives/m-on-render.js';
 
 export default angular
   .module('directives', [
     $mLayout,
-    $mOnloaded
+    $mOnRender
   ])
   .name;

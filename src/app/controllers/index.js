@@ -8,15 +8,10 @@ export default angular
       $me.description = pageInfo.description;
     });
 
-    $me.menu = ['menu1', 'menu2', 'menu3'];
-    $me.menuloaded = () => {
-      console.log('menuloaded');
-    };
-    $me.pushMenu = () => {
-      $me.menu.push('menu' + ($me.menu.length + 1));
-    };
-    $me.popMenu = () => {
-      $me.menu.pop();
-    };
+    // Menu data
+    $me.menu = [
+      { path: './', label: 'Home' },
+      { path: 'about', label: 'About' }
+    ];
   }])
   .name;
