@@ -1,13 +1,14 @@
 
 import $configs from './configs.js';
 import $routes from './routes.js';
+import $services from './app.services.js';
 import $controllers from './app.controllers.js';
 import $directives from './app.directives.js';
 import $components from './app.components.js';
 
 angular
   // Registeration Modules
-  .module($configs.appName, ['ngRoute', $controllers, $directives, $components])
+  .module($configs.appName, ['ngRoute', $services, $controllers, $directives, $components])
   // Configuration
   .config(['$routeProvider', '$locationProvider', '$compileProvider', '$sceProvider', function ($routeProvider, $locationProvider, $compileProvider, $sceProvider) {
     // Set routes

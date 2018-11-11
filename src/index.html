@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="M-APP" ng-strict-di ng-controller="IndexController as $index">
+<html lang="en" ng-app="M-APP">
   <head>
     <!-- Metadata -->
     <base href="/">
@@ -8,15 +8,15 @@
     <link rel="icon" href="">
 	
     <!-- SEO -->
-    <title>{{$index.title}}</title>
-    <meta name="description" content="{{$index.description}}">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
   
     <!-- CSS: Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
     <!-- CSS: M-APP -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body ng-strict-di ng-controller="IndexController as $index">
     <!-- Content -->
     <ng-view></ng-view>
 

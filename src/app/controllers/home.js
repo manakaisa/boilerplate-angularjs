@@ -1,13 +1,12 @@
 export default angular
   .module('controllers.HomeController', [])
-  .controller('HomeController', ['$scope', function ($scope) {
+  .controller('HomeController', ['$scope', '$pageInfo', function ($scope, $pageInfo) {
     let $me = this;
 
-    $scope.$emit('updatedPageInfo', {
-      title: 'Home',
-      description: 'Home - description'
-    });
+    // Meta
+    $pageInfo.title = 'Home';
+    $pageInfo.description = 'Home - description';
 
-    $me.content = 'hello world';
+    $me.title = 'Home';
   }])
   .name;

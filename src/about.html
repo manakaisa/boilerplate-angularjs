@@ -1,7 +1,9 @@
-<m-layout href="templates/template.html">
-  <m-layout-top>
-    <h1>About</h1>
-  </m-layout-top>
-  <m-layout-body></m-layout-body>
-  <m-layout-bottom></m-layout-bottom>
-</m-layout>
+<ng-controller ng-controller="AboutController as $about">
+  <m-layout href="templates/template.html">
+    <m-layout-top>
+      <h1>{{$about.title}}</h1>
+    </m-layout-top>
+    <m-layout-body></m-layout-body>
+    <m-layout-bottom></m-layout-bottom>
+  </m-layout>
+</ng-controller>

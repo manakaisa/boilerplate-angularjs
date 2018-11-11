@@ -1,9 +1,11 @@
-<m-layout href="templates/template.html" ng-controller="HomeController as $home">
-  <m-layout-top>
-    <h1>Home</h1>
-  </m-layout-top>
-  <m-layout-body>
-    <m-todo></m-todo>
-  </m-layout-body>
-  <m-layout-bottom></m-layout-bottom>
-</m-layout>
+<ng-controller ng-controller="HomeController as $home">
+  <m-layout href="templates/template.html">
+    <m-layout-top>
+      <h1>{{$home.title}}</h1>
+    </m-layout-top>
+    <m-layout-body>
+      <m-todo></m-todo>
+    </m-layout-body>
+    <m-layout-bottom></m-layout-bottom>
+  </m-layout>  
+</ng-controller>
