@@ -7,6 +7,7 @@ export default angular
     $pageInfo.title = 'Home';
     $pageInfo.description = 'Home - description';
 
+    // Page content (example)
     $me.title = 'Home';
   }])
   .name;

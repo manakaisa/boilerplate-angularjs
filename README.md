@@ -7,3 +7,4 @@ A Boilerplate for AngularJS
 - Component-based UI
 - Minify
 - Base Url
+- Auto Scroll (experimental)
