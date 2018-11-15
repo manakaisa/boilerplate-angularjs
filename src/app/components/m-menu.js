@@ -1,6 +1,6 @@
 const templateHTML = `
   <ul>
-    <li ng-repeat="item in $ctrl.menuState"><a ng-href="{{item.path}}">{{item.label}}</a></li>
+    <li ng-repeat="item in $ctrl.menu"><a ng-href="{{item.path}}">{{item.label}}</a></li>
   </ul>
 `;
 
@@ -10,16 +10,6 @@ export default angular
     bindings: {
       menu: '<'
     },
-    template: templateHTML,
-    controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
-      let $ctrl = this;
-    
-      // Make immutable for Object and Array
-      $ctrl.$onChanges = (changesObj) => {
-        if (changesObj.menu) {
-          $ctrl.menuState = angular.copy(changesObj.menu.currentValue);
-        }
-      };
-    }]
+    template: templateHTML
   })
   .name;
