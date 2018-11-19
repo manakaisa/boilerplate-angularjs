@@ -1,7 +1,7 @@
 const templateHTML = `
   <ul>
-    <li ng-repeat="item in $ctrl.checklistState">
-      <input type="checkbox" ng-value="item.key" ng-model="item.checked" ng-change="$ctrl.handleChange(item)" />
+    <li ng-repeat="item in $ctrl.checklist">
+      <input type="checkbox" ng-value="item.key" ng-model="$ctrl.checklistState[item.key]" ng-change="$ctrl.handleChange(item)" />
       <span>{{item.label}}</span>
     </li>
   </ul>
@@ -18,15 +18,18 @@ export default angular
     controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
       let $ctrl = this;
 
-      // Make immutable for Object and Array
+      $ctrl.checklistState = [];
+
       $ctrl.$onChanges = (changesObj) => {
         if (changesObj.checklist) {
-          $ctrl.checklistState = angular.copy(changesObj.checklist.currentValue);
+          changesObj.checklist.currentValue.forEach(item => {
+            $ctrl.checklistState[item.key] = item.checked;
+          });
         }
       };
 
       $ctrl.handleChange = (item) => {
-        $ctrl.onCheck({ key: item.key, checked: item.checked });
+        $ctrl.onCheck({ key: item.key, checked: $ctrl.checklistState[item.key] });
       };
     }]
   })
