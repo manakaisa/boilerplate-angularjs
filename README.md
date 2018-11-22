@@ -10,6 +10,7 @@ A Boilerplate for AngularJS
 - Auto Scroll (experimental)
 
 ## Component workflow
+```
 parent    ←   (update props)
 ↓                  ↑
 (set props/one-way binding)
@@ -24,3 +25,4 @@ state     ←   (update state)
 (set attrs from state/two-way binding)
 ↓                  |
 Form      →      event
+```
