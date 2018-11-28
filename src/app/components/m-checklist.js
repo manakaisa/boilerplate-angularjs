@@ -18,7 +18,7 @@ export default angular
     controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
       let $ctrl = this;
 
-      $ctrl.checklistState = [];
+      $ctrl.checklistState = {};
 
       $ctrl.$onChanges = (changesObj) => {
         if (changesObj.checklist) {
