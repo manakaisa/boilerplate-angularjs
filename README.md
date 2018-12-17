@@ -30,4 +30,4 @@ Form      →      event
 ```
 
 ## Tested by:
-![BrowserStack](https://bstacksupport.zendesk.com/attachments/token/fOHQtvrclnZEqoLZ5BWBm4CDx/?name=browserstack-logo-600x315.png)(https://www.browserstack.com)
+[![BrowserStack](https://bstacksupport.zendesk.com/attachments/token/fOHQtvrclnZEqoLZ5BWBm4CDx/?name=browserstack-logo-600x315.png)](https://www.browserstack.com)
